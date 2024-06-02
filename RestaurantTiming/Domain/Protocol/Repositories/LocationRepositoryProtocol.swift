@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol LocationRepositoryProtocol {
+    func getLocationData(completion: @escaping Result<LocationData>)
+}

@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+struct LocationUsecase {
+
+    let locationRepository: LocationRepositoryProtocol
+
+    init(locationRepository: LocationRepositoryProtocol) {
+        self.locationRepository = locationRepository
+    }
+
+    func fetchLocationData(completion: @escaping Result<LocationData>) {
+            locationRepository.getLocationData(completion: completion)
+    }
+}
+
